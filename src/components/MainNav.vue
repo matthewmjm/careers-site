@@ -4,9 +4,29 @@
       <div
         class="border-brand-gray-1 mx-auto flex h-full flex-nowrap border-b border-solid px-8"
       >
-        <a href="/" class="flex h-full items-center text-xl"
+        <a :href="url" class="flex h-full items-center text-xl"
           >{{ company }} Careers</a
         >
+        <nav class="ml-12 h-full">
+          <ul class="flex h-full list-none">
+            <li class="h-full">
+              <a :href="urlTeams" class="flex h-full items-center py-2.5">Teams</a>
+            </li>
+            <li class="h-full ml-9">
+              <a :href="urlLocations" class="flex h-full items-center py-2.5">Locations</a>
+            </li>
+            <li class="h-full ml-9">
+              <a :href="urlBenefits" class="flex h-full items-center py-2.5">Benefits</a>
+            </li>
+            <li class="h-full ml-9">
+              <a :href="urlJobs" class="flex h-full items-center py-2.5">Jobs</a>
+            </li>
+            <li class="h-full ml-9">
+              <a :href="urlStudents" class="flex h-full items-center py-2.5">Students</a>
+            </li>
+          </ul>
+
+        </nav>
       </div>
     </div>
   </header>
@@ -14,4 +34,10 @@
 
 <script setup>
 const company = "FacePlace";
+const url = "https://careers.google.com/";
+const urlTeams = "https://careers.google.com/teams/";
+const urlLocations = "https://careers.google.com/locations/";
+const urlBenefits = "https://careers.google.com/benefits/";
+const urlJobs = "https://www.google.com/about/careers/applications/jobs/results/";
+const urlStudents = "https://careers.google.com/students/";
 </script>
