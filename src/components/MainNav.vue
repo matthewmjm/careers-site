@@ -7,9 +7,6 @@
         <a href="/" class="flex h-full items-center text-xl"
           >{{ company }} Careers</a
         >
-        <h2 class="ml-8 flex h-full items-center">
-          Developed by {{ author.firstName }} {{ author.lastName }}
-        </h2>
       </div>
     </div>
   </header>
@@ -17,8 +14,4 @@
 
 <script setup>
 const company = "FacePlace";
-const author = {
-  firstName: "Ryan",
-  lastName: "Barrett",
-};
 </script>
