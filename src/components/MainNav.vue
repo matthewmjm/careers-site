@@ -9,10 +9,10 @@
         >
         <nav class="ml-12 h-full">
           <ul class="flex h-full list-none">
-            <li class="h-full">
-              <a :href="urlTeams" class="flex h-full items-center py-2.5">Teams</a>
+            <li class="h-full first:ml-0 ml-9" v-for="menuItem in menuItems" :key="menuItem">
+              <a href="" class="flex h-full items-center py-2.5">{{ menuItem }}</a>
             </li>
-            <li class="h-full ml-9">
+            <!-- <li class="h-full ml-9">
               <a :href="urlLocations" class="flex h-full items-center py-2.5">Locations</a>
             </li>
             <li class="h-full ml-9">
@@ -23,7 +23,7 @@
             </li>
             <li class="h-full ml-9">
               <a :href="urlStudents" class="flex h-full items-center py-2.5">Students</a>
-            </li>
+            </li> -->
           </ul>
 
         </nav>
@@ -34,6 +34,13 @@
 
 <script setup>
 const company = "FacePlace";
+const menuItems = [
+  "Teams",
+  "Locations",
+  "Benefits",
+  "Jobs",
+  "Students",
+];
 const url = "https://careers.google.com/";
 const urlTeams = "https://careers.google.com/teams/";
 const urlLocations = "https://careers.google.com/locations/";
