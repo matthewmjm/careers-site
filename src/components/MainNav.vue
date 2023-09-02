@@ -29,7 +29,7 @@
         </nav>
         <div class="flex items-center h-full ml-auto">
           <ProfileImage v-if="isLoggedIn" />
-          <ActionButton v-else />
+          <ActionButton v-else @click="logInUser" />
         </div>
       </div>
     </div>
@@ -37,6 +37,7 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
 import ActionButton from "@/components/ActionButton.vue";
 import ProfileImage from "@/components/ProfileImage.vue";
 const company = "FacePlace";
@@ -53,5 +54,9 @@ const urlLocations = "https://careers.google.com/locations/";
 const urlBenefits = "https://careers.google.com/benefits/";
 const urlJobs = "https://www.google.com/about/careers/applications/jobs/results/";
 const urlStudents = "https://careers.google.com/students/";
-const isLoggedIn = false;
+const isLoggedIn = ref(false);
+
+function logInUser() {
+  isLoggedIn.value = !isLoggedIn.value;
+}
 </script>
