@@ -27,8 +27,9 @@
           </ul>
 
         </nav>
-        <div class="flex items-center ml-auto">
-          <ActionButton />
+        <div class="flex items-center h-full ml-auto">
+          <ProfileImage v-if="isLoggedIn" />
+          <ActionButton v-else />
         </div>
       </div>
     </div>
@@ -37,6 +38,7 @@
 
 <script setup>
 import ActionButton from "@/components/ActionButton.vue";
+import ProfileImage from "@/components/ProfileImage.vue";
 const company = "FacePlace";
 const menuItems = [
   "Teams",
@@ -51,4 +53,5 @@ const urlLocations = "https://careers.google.com/locations/";
 const urlBenefits = "https://careers.google.com/benefits/";
 const urlJobs = "https://www.google.com/about/careers/applications/jobs/results/";
 const urlStudents = "https://careers.google.com/students/";
+const isLoggedIn = false;
 </script>
