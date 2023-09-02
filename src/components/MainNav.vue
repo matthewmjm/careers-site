@@ -27,12 +27,16 @@
           </ul>
 
         </nav>
+        <div class="flex items-center ml-auto">
+          <ActionButton />
+        </div>
       </div>
     </div>
   </header>
 </template>
 
 <script setup>
+import ActionButton from "@/components/ActionButton.vue";
 const company = "FacePlace";
 const menuItems = [
   "Teams",
