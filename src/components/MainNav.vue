@@ -28,10 +28,11 @@
 
         </nav>
         <div class="flex items-center h-full ml-auto">
-          <ProfileImage v-if="isLoggedIn" />
-          <ActionButton v-else @click="logInUser" text="Sign In" type="secondary"/>
+          <profile-image v-if="isLoggedIn" />
+          <action-button v-else @click="logInUser" text="Sign In" type="primary"/>
         </div>
       </div>
+      <sub-nav v-if="isLoggedIn"/>
     </div>
   </header>
 </template>
@@ -40,6 +41,8 @@
 import { ref } from "vue";
 import ActionButton from "@/components/ActionButton.vue";
 import ProfileImage from "@/components/ProfileImage.vue";
+import SubNav from "@/components/SubNav.vue";
+
 const company = "FacePlace";
 const menuItems = [
   "Teams",
