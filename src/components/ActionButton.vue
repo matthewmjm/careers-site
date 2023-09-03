@@ -10,8 +10,18 @@
 <script setup>
 import { ref, computed } from "vue";
 const props = defineProps({
-  text: String,
-  type: String,
+  text: {
+    type: String,
+    required: true,
+  },
+  type: {
+    type: String,
+    required: false,
+    default: "primary",
+    validator: (value) => {
+      return ["primary", "secondary"].includes(value);
+    },
+  }
 });
 
 const buttonClass =  computed(() => {
@@ -21,8 +31,6 @@ const buttonClass =  computed(() => {
 })
 
 function handleClick(event) {
-  console.log("Action Button is Clicked");
-  console.log("Event Object: ", event);
 }
 
 </script>
