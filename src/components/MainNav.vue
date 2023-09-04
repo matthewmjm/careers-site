@@ -1,5 +1,5 @@
 <template>
-  <header class="w-full text-sm">
+  <header :class="['w-full', 'text-sm', headerHeightClass]">
     <div class="fixed left-0 top-0 h-16 w-full bg-white">
       <div
         class="border-brand-gray-1 mx-auto flex h-full flex-nowrap border-b border-solid px-8"
@@ -38,7 +38,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { computed, ref } from "vue";
 import ActionButton from "@/components/ActionButton.vue";
 import ProfileImage from "@/components/ProfileImage.vue";
 import SubNav from "@/components/SubNav.vue";
@@ -58,6 +58,10 @@ const urlBenefits = "https://careers.google.com/benefits/";
 const urlJobs = "https://www.google.com/about/careers/applications/jobs/results/";
 const urlStudents = "https://careers.google.com/students/";
 const isLoggedIn = ref(false);
+
+const headerHeightClass = computed(() => {
+  return isLoggedIn.value ? "h-32" : "h-16";
+});
 
 function logInUser() {
   isLoggedIn.value = !isLoggedIn.value;
