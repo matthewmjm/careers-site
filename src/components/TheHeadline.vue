@@ -1,6 +1,8 @@
 <template>
   <section>
-    <h1>{{ action }} For Everyone</h1>
+    <h1>
+      <span :class="actionClasses">{{ action  }}</span>
+      <br /> For Everyone</h1>
     <h2>Find Your Next Job at The FacePlace</h2>
   </section>
 </template>
@@ -20,6 +22,16 @@ export default {
   beforeUnmount() {
     clearInterval(this.interval);
   },
+  computed: {
+    actionClasses() {
+      return {
+        build: this.action ==="Build",
+        create: this.action ==="Create",
+        design: this.action ==="Design",
+        code: this.action ==="Code",
+      }
+    },
+  },
   methods: {
     changeTitle() {
       this.interval = setInterval(() => {
@@ -35,5 +47,17 @@ export default {
 </script>
 
 <style scoped>
+.build {
+  color: #1a73e8;
+}
+.create {
+  color: #34a853;
+}
+.design {
+  color: #f9ab00;
+}
+.code {
+  color: #d93025;
+}
 
 </style>
