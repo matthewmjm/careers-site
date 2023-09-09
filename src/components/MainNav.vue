@@ -43,7 +43,7 @@ import ActionButton from "@/components/ActionButton.vue";
 import ProfileImage from "@/components/ProfileImage.vue";
 import SubNav from "@/components/SubNav.vue";
 
-const company = "FacePlace";
+const company = "The FacePlace";
 const menuItems = [
   "Teams",
   "Locations",
