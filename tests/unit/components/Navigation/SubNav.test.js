@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/vue'
 import toBeInTheDocument from '@testing-library/jest-dom';
 import queryByText from '@testing-library/jest-dom';
 
-import SubNav from '@/components/SubNav.vue'
+import SubNav from '@/components/Navigation/SubNav.vue'
 import { describe, expect } from 'vitest';
 
 describe('SubNav', () => {

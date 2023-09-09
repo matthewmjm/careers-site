@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/vue'
 import userEvent from '@testing-library/user-event'
 import toBeInTheDocument from '@testing-library/jest-dom';
 
-import MainNav from '@/components/MainNav.vue'
+import MainNav from '@/components/Navigation/MainNav.vue'
 import { expect } from 'vitest';
 
 describe('MainNav', () => {
@@ -19,7 +19,7 @@ describe('MainNav', () => {
   it('displays company name', () => {
     renderMainNav();
 
-    const companyName = screen.getByText('FacePlace Careers');
+    const companyName = screen.getByText('The FacePlace Careers');
     expect(companyName).toBeInTheDocument();
   }); 
 

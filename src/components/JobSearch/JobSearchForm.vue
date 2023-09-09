@@ -6,10 +6,9 @@
         <label class="absolute left-0 -top-10">Role</label>
         <input 
           type="text" 
-          :value="role"
+          v-model="role"
           placeholder="Software Engineer" 
           class="w-full text-lg font-normal focus:outline-none"
-          @input="updateRole"
         />
       </div>
       
@@ -22,16 +21,15 @@
       <label class="absolute left-0 -top-10">Where?</label>
       <input 
         type="text" 
-        :value="location"
+        v-model="location"
         placeholder="Denver, CO" 
         class="w-full text-lg font-normal focus:outline-none"
-        @input="location=$event.target.value"
+
       />
     </div>
     </div>
     <ActionButton 
       text="Search" 
-      :value="location"
       type="secondary" 
       class="rounded-r-3xl" 
     />
@@ -40,13 +38,11 @@
 
 <script setup>
 import { ref } from "vue";
-import ActionButton from "@/components/ActionButton.vue";
+import ActionButton from "@/components/Shared/ActionButton.vue";
 
 const role = ref("");
 const location = ref("");
-function updateRole(event) {
-  role.value = event.target.value;
-}
+
 </script>
 
 <style scoped></style>

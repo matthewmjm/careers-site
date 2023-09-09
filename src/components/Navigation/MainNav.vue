@@ -39,9 +39,9 @@
 
 <script setup>
 import { computed, ref } from "vue";
-import ActionButton from "@/components/ActionButton.vue";
-import ProfileImage from "@/components/ProfileImage.vue";
-import SubNav from "@/components/SubNav.vue";
+import ActionButton from "@/components/Shared/ActionButton.vue";
+import ProfileImage from "@/components/Navigation/ProfileImage.vue";
+import SubNav from "@/components/Navigation/SubNav.vue";
 
 const company = "The FacePlace";
 const menuItems = [

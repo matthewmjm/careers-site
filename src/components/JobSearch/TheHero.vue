@@ -8,7 +8,14 @@
           <TheHeadline />
           <JobSearchForm />
         </div>
-        <div class="col-span-5 col-start-7">
+        <div 
+          class="col-span-5 col-start-7 self-center justify-self-center"
+        >
+          <img 
+            src="coder.png" 
+            alt="Vue.js Logo" 
+            class="h-80 w-80 object-contain"
+          />
         </div>
         <div class="col-span-1 grid-col-end-12">
       </div>
@@ -19,8 +26,8 @@
 
 
 <script setup>
-import TheHeadline from "@/components/TheHeadline.vue";
-import JobSearchForm from "@/components/JobSearchForm.vue";
+import TheHeadline from "@/components/JobSearch/TheHeadline.vue";
+import JobSearchForm from "@/components/JobSearch/JobSearchForm.vue";
 
 
 </script>

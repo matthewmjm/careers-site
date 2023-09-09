@@ -1,5 +1,5 @@
 import {render, screen} from '@testing-library/vue'
-import ActionButton from '@/components/ActionButton.vue'
+import ActionButton from '@/components/Shared/ActionButton.vue'
 import { toBeInTheDocument, toHaveClass } from '@testing-library/jest-dom';
 // import { describe } from 'vitest'
 

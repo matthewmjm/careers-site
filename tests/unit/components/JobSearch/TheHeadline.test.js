@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/vue'
 import toBeInTheDocument from '@testing-library/jest-dom';
 import queryByText from '@testing-library/jest-dom';
 
-import TheHeadline from '@/components/TheHeadline.vue'
+import TheHeadline from '@/components/JobSearch/TheHeadline.vue'
 import { describe, expect, vi } from 'vitest';
 import {nextTick} from "vue";
 
