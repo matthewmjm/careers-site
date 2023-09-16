@@ -4,11 +4,8 @@
     <div class="flex flex-1 flex-nowrap h-full text-base font-light">
       <div class="flex h-full flex-1 relative items-center pr-3">
         <label class="absolute left-0 -top-10">Role</label>
-        <input 
-          type="text" 
-          v-model="role"
+        <text-input 
           placeholder="Software Engineer" 
-          class="w-full text-lg font-normal focus:outline-none"
         />
       </div>
       
@@ -19,17 +16,13 @@
     </span>
     <div class="flex h-full flex-1 relative items-center pl-3">
       <label class="absolute left-0 -top-10">Where?</label>
-      <input 
-        type="text" 
-        v-model="location"
+      <text-input 
         placeholder="Denver, CO" 
-        class="w-full text-lg font-normal focus:outline-none"
-
       />
     </div>
     </div>
     <ActionButton 
-      text="Search" 
+      text="Search"     
       type="secondary" 
       class="rounded-r-3xl" 
     />
@@ -39,6 +32,7 @@
 <script setup>
 import { ref } from "vue";
 import ActionButton from "@/components/Shared/ActionButton.vue";
+import TextInput from "@/components/Shared/TextInput.vue";
 
 const role = ref("");
 const location = ref("");
