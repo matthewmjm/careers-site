@@ -6,7 +6,7 @@
         <label class="absolute left-0 -top-10">Role</label>
         <text-input 
           placeholder="Software Engineer" 
-          @handle-input="updateRole"
+          @handle-input="role=$event"
         />
       </div>
       
@@ -38,10 +38,6 @@ import TextInput from "@/components/Shared/TextInput.vue";
 
 const role = ref("");
 const location = ref("");
-
-function updateRole(payload) {
-  role.value = payload;
-}
 
 function updateLocation(payload) {
   location.value = payload;
