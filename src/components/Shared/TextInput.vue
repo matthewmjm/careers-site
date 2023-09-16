@@ -1,18 +1,20 @@
 <template>
   <input
     type="text" 
-    :value="value"
+    :value="inputValue"
     class="w-full text-lg font-normal focus:outline-none"
-    @input="handleInput"
+    @input="handleInputValue"
 />
 </template>
 
 <script setup>
 import { ref } from "vue";
-const value = ref("");
+const inputValue = ref("");
+const emit = defineEmits(["handleInput"]);
 
-function handleInput($event) {
-  value.value = $event.target.value;
+function handleInputValue($event) {
+  inputValue.value = $event.target.value;
+  emit("handleInput", inputValue.value);
 }
 
 </script>

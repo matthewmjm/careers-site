@@ -6,6 +6,7 @@
         <label class="absolute left-0 -top-10">Role</label>
         <text-input 
           placeholder="Software Engineer" 
+          @handle-input="updateRole"
         />
       </div>
       
@@ -18,6 +19,7 @@
       <label class="absolute left-0 -top-10">Where?</label>
       <text-input 
         placeholder="Denver, CO" 
+        @handle-input="updateLocation"
       />
     </div>
     </div>
@@ -36,6 +38,16 @@ import TextInput from "@/components/Shared/TextInput.vue";
 
 const role = ref("");
 const location = ref("");
+
+function updateRole(value) {
+  role.value = value;
+  console.log(role.value);
+}
+
+function updateLocation(value) {
+  location.value = value;
+  console.log(location.value);
+}
 
 </script>
 
