@@ -39,14 +39,12 @@ import TextInput from "@/components/Shared/TextInput.vue";
 const role = ref("");
 const location = ref("");
 
-function updateRole(value) {
-  role.value = value;
-  console.log(role.value);
+function updateRole(payload) {
+  role.value = payload;
 }
 
-function updateLocation(value) {
-  location.value = value;
-  console.log(location.value);
+function updateLocation(payload) {
+  location.value = payload;
 }
 
 </script>
